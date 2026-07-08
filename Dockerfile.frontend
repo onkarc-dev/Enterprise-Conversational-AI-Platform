@@ -1,0 +1,48 @@
+# Multi-stage build for Flight Analytics Frontend
+
+# Stage 1: Builder
+FROM node:18-alpine as builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json pnpm-lock.yaml* yarn.lock* package-lock.json* ./
+
+# Install dependencies with pnpm (preferred)
+RUN npm install -g pnpm && \
+    pnpm install --frozen-lockfile || \
+    npm ci
+
+# Copy source code
+COPY . .
+
+# Build Next.js application
+RUN pnpm build || npm run build
+
+# Stage 2: Runtime
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install pnpm runtime
+RUN npm install -g pnpm
+
+# Copy from builder
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./
+
+# Set environment variables
+ENV NEXT_TELEMETRY_DISABLED=1 \
+    NODE_ENV=production
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
+    CMD wget --quiet --tries=1 --spider http://localhost:3000/ || exit 1
+
+# Expose port
+EXPOSE 3000
+
+# Start application
+CMD ["npm", "start"]
