@@ -29,7 +29,9 @@ class DynamicFlightCalculator:
                 base_time = pd.Timestamp.now()
                 self.df['timestamp'] = base_time + pd.to_timedelta(self.df.index, unit='s')
 
-        print("CSV loaded successfully")
+        print("\n===== CSV COLUMNS =====")
+        print(self.df.columns.tolist())
+        print("=======================\n")
         
         # Check if Phase column already exists (from rule_labelled.csv)
         if 'Phase' in self.df.columns:
@@ -55,7 +57,16 @@ class DynamicFlightCalculator:
     # ============================ SEGMENT ID ====================================================== #
 
     def create_segments(self):
-        self.df['segment_id'] = (self.df['Phase'] != self.df['Phase'].shift()).cumsum() #Start a new segment every time the phase value changes.
+
+        if 'Phase' not in self.df.columns:
+        raise ValueError(
+            f"'Phase' column not found.\nAvailable columns:\n{self.df.columns.tolist()}"
+        )
+
+        self.df['segment_id'] = (
+        self.df['Phase'] != self.df['Phase'].shift()
+    ).cumsum()
+
         print("Segment IDs Created")
 
     # ============================ SEGMENT HANDLING ====================================================== #
@@ -2120,9 +2131,10 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Error loading file {FILE_PATH}: {e}")
         raise
-
-    engine.create_segments()
-    engine.add_phase_numbering()
+	if "phase" in engine.df.columns and "Phase" not in engine.df.columns:
+        	engine.df.rename(columns={"phase": "Phase"}, inplace=True)
+    	engine.create_segments()
+    	engine.add_phase_numbering()
 
     print("\nDynamic Flight Calculator Ready \n")
     print("DF head:\n", engine.df.head())

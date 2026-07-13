@@ -229,7 +229,12 @@ def execute_query(intent_json: dict, engine) -> dict:
 
 
 # Initialize engine on import (best-effort)
+import traceback
+
 try:
     init_engine()
-except Exception as e:
-    print(f"Engine initialization failed: {e}")
+    print("✅ Engine initialized successfully")
+except Exception:
+    print("\n========== FULL TRACEBACK ==========")
+    traceback.print_exc()
+    print("====================================\n")
