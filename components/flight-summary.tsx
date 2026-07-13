@@ -12,10 +12,12 @@ interface FlightSummaryProps {
 export function FlightSummary({ flightData }: FlightSummaryProps) {
   const phases = getFlightPhases(flightData.data);
   const overallMetrics = extractMetrics(flightData.data);
+  const maxAltitude = overallMetrics?.altitude?.max;
+  const maxIas = overallMetrics?.ias?.max;
+  const avgIas = overallMetrics?.ias?.avg;
 
   return (
     <>
-      {/* Flight Duration Card */}
       <Card className="border-slate-700/50 bg-slate-800/50 backdrop-blur-sm">
         <div className="flex items-start justify-between p-6">
           <div>
@@ -29,39 +31,36 @@ export function FlightSummary({ flightData }: FlightSummaryProps) {
         </div>
       </Card>
 
-      {/* Max Altitude Card */}
       <Card className="border-slate-700/50 bg-slate-800/50 backdrop-blur-sm">
         <div className="flex items-start justify-between p-6">
           <div>
             <p className="text-sm font-medium text-slate-400">Max Altitude</p>
             <p className="mt-2 text-3xl font-bold text-white">
-              {overallMetrics?.altitude.max.toFixed(0) || '—'} ft
+              {maxAltitude !== undefined ? maxAltitude.toFixed(0) : '-'} ft
             </p>
             <p className="mt-1 text-xs text-slate-500">
-              FL{(overallMetrics?.altitude.max / 100).toFixed(0)}
+              {maxAltitude !== undefined ? `FL${(maxAltitude / 100).toFixed(0)}` : 'FL-'}
             </p>
           </div>
           <TrendingUp className="h-8 w-8 text-emerald-400" />
         </div>
       </Card>
 
-      {/* Max Airspeed Card */}
       <Card className="border-slate-700/50 bg-slate-800/50 backdrop-blur-sm">
         <div className="flex items-start justify-between p-6">
           <div>
             <p className="text-sm font-medium text-slate-400">Max Airspeed</p>
             <p className="mt-2 text-3xl font-bold text-white">
-              {overallMetrics?.ias.max.toFixed(1) || '—'} kts
+              {maxIas !== undefined ? maxIas.toFixed(1) : '-'} kts
             </p>
             <p className="mt-1 text-xs text-slate-500">
-              Avg: {overallMetrics?.ias.avg.toFixed(1)} kts
+              Avg: {avgIas !== undefined ? avgIas.toFixed(1) : '-'} kts
             </p>
           </div>
           <Gauge className="h-8 w-8 text-violet-400" />
         </div>
       </Card>
 
-      {/* Flight Phases Card */}
       <Card className="border-slate-700/50 bg-slate-800/50 backdrop-blur-sm md:col-span-2 lg:col-span-3">
         <div className="p-6">
           <p className="text-sm font-medium text-slate-400 mb-4">Flight Phases</p>
@@ -79,7 +78,6 @@ export function FlightSummary({ flightData }: FlightSummaryProps) {
         </div>
       </Card>
 
-      {/* Max G-Load Card */}
       {overallMetrics?.g_load && (
         <Card className="border-slate-700/50 bg-slate-800/50 backdrop-blur-sm">
           <div className="flex items-start justify-between p-6">

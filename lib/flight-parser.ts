@@ -48,7 +48,7 @@ export function parseFlightCSV(csvContent: string): FlightDataSet {
     header: true,
     dynamicTyping: false,
     skipEmptyLines: true,
-    transformHeader: (h) => h.toLowerCase().trim(),
+    transformHeader: (h: string) => h.toLowerCase().trim(),
   });
 
   if (results.errors.length > 0) {
