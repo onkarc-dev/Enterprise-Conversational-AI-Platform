@@ -1,0 +1,49 @@
+{
+  "name": "bf423d11-aca3-4377-aa1c-0ba2c34f09e2",
+  "displayName": "Metric Query Handler",
+  "form": {
+    "parameters": [ {
+      "displayName": "metric",
+      "required": true,
+      "entityType": "@metric",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which flight metric would you like to analyze?", "Please specify the metric you want to inspect.", "Which telemetry parameter are you interested in?", "Would you like to analyze airspeed, altitude, pitch, roll, heading, or another metric?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "phase",
+      "required": true,
+      "entityType": "@phase",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which flight phase are you interested in?", "Please specify the flight phase.", "Do you want data for climb, cruise, descent, takeoff, landing, or another phase?", "Which segment of the flight should I analyze?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "aggregation",
+      "required": true,
+      "entityType": "@aggregation",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Would you like the average, minimum, maximum, start or end value?", "How should I aggregate the metric?", "Should I calculate the average, minimum, or maximum?", "What type of statistic are you looking for?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  }
+}

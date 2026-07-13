@@ -1,0 +1,10 @@
+{
+  "name": "ab9a04e7-8548-426e-985b-58a7f51dfc35",
+  "displayName": "executive_summary",
+  "parameters": [ {
+    "id": "person",
+    "entityType": "@sys.person"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

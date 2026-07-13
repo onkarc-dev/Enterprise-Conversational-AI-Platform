@@ -1,0 +1,31 @@
+{
+  "entities": [ {
+    "value": "LANDING",
+    "synonyms": [ "land", "LANDING", "touchdown " ],
+    "languageCode": "en"
+  }, {
+    "value": "TAXI",
+    "synonyms": [ "ground taxi", "TAXI", "taxiing" ],
+    "languageCode": "en"
+  }, {
+    "value": "TAKEOFF",
+    "synonyms": [ "departure", "take off", "TAKEOFF" ],
+    "languageCode": "en"
+  }, {
+    "value": "CLIMB",
+    "synonyms": [ "ascent", "CLIMB", "climbing" ],
+    "languageCode": "en"
+  }, {
+    "value": "CRUISE",
+    "synonyms": [ " enroute", "CRUISE", "cruising" ],
+    "languageCode": "en"
+  }, {
+    "value": "DESCENT",
+    "synonyms": [ "descending ", "DESCENT", "letdown" ],
+    "languageCode": "en"
+  }, {
+    "value": "APPROACH",
+    "synonyms": [ "final approach ", "arrival approach", "approach" ],
+    "languageCode": "en"
+  } ]
+}

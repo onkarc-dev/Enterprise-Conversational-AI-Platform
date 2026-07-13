@@ -1,0 +1,75 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Show ",
+      "auto": true
+    }, {
+      "text": "taxi",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Try ",
+      "auto": true
+    }, {
+      "text": "approach",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Use ",
+      "auto": true
+    }, {
+      "text": "landing",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Show ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " instead",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What about ",
+      "auto": true
+    }, {
+      "text": "descent",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What about ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

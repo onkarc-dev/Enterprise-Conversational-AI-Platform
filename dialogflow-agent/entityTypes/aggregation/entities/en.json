@@ -1,0 +1,23 @@
+{
+  "entities": [ {
+    "value": "end",
+    "synonyms": [ "end", "final ", "ending " ],
+    "languageCode": "en"
+  }, {
+    "value": "start",
+    "synonyms": [ "beginning ", "initial ", "start" ],
+    "languageCode": "en"
+  }, {
+    "value": "maximum",
+    "synonyms": [ "highest ", "max ", "maximum" ],
+    "languageCode": "en"
+  }, {
+    "value": "minimum",
+    "synonyms": [ " lowest ", "min", "minimum" ],
+    "languageCode": "en"
+  }, {
+    "value": "average",
+    "synonyms": [ "average", "avg ", "mean " ],
+    "languageCode": "en"
+  } ]
+}

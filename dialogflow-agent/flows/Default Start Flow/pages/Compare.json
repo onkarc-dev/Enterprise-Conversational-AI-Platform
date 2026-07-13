@@ -1,0 +1,49 @@
+{
+  "name": "81736d0e-555c-476f-bcb9-e23978cff2e7",
+  "displayName": "Compare",
+  "form": {
+    "parameters": [ {
+      "displayName": "phase_1",
+      "required": true,
+      "entityType": "@phase",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is the first flight phase?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "phase_2",
+      "required": true,
+      "entityType": "@phase",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is the second flight phase?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "metric",
+      "required": true,
+      "entityType": "@metric",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which metric would you like to compare?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  }
+}

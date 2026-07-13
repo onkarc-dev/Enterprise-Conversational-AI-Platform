@@ -1,0 +1,10 @@
+{
+  "name": "23d50d69-76ac-403b-9949-8165e749993a",
+  "displayName": "phase_duration",
+  "parameters": [ {
+    "id": "phase",
+    "entityType": "@phase"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

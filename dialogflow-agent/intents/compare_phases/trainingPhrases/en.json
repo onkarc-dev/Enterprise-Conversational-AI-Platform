@@ -1,0 +1,114 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Compare ",
+      "auto": true
+    }, {
+      "text": "heading",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " between ",
+      "auto": true
+    }, {
+      "text": "approach",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "and landing",
+      "parameterId": "phase1",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Compare ",
+      "auto": true
+    }, {
+      "text": "airspeed",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " versus ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase1",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Compare ",
+      "auto": true
+    }, {
+      "text": "altitude",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " during ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " and ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase1",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Compare ",
+      "auto": true
+    }, {
+      "text": "descent",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "and landing",
+      "parameterId": "phase1",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Compare ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " and ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase1",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

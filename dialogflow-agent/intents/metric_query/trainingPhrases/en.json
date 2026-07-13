@@ -1,0 +1,238 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Average",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "IAS",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Maximum",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "airspeed",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " during ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Show ",
+      "auto": true
+    }, {
+      "text": "average",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "altitude",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " during ",
+      "auto": true
+    }, {
+      "text": "takeoff",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Minimum",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "roll",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " during ",
+      "auto": true
+    }, {
+      "text": "landing",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What is the ",
+      "auto": true
+    }, {
+      "text": "average",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "vertical speed",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Maximum",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "heading",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "approach",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Average",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ground speed",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " during ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Show ",
+      "auto": true
+    }, {
+      "text": "minimum",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "pitch",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " during ",
+      "auto": true
+    }, {
+      "text": "descent",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What was the ",
+      "auto": true
+    }, {
+      "text": "maximum",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "altitude",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What was the ",
+      "auto": true
+    }, {
+      "text": "average",
+      "parameterId": "aggregation",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "IAS",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " during ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

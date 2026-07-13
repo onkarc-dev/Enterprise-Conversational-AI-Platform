@@ -1,0 +1,16 @@
+{
+  "name": "0a838f52-3b73-4880-896c-180cab480d72",
+  "displayName": "compare_phases",
+  "parameters": [ {
+    "id": "phase",
+    "entityType": "@phase"
+  }, {
+    "id": "phase1",
+    "entityType": "@phase"
+  }, {
+    "id": "metric",
+    "entityType": "@metric"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

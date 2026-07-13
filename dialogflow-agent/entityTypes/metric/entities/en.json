@@ -1,0 +1,31 @@
+{
+  "entities": [ {
+    "value": "Heading",
+    "synonyms": [ "bearing", "direction ", "Heading", "heading " ],
+    "languageCode": "en"
+  }, {
+    "value": "GndSpd",
+    "synonyms": [ "gndspd", "GndSpd", "ground speed " ],
+    "languageCode": "en"
+  }, {
+    "value": "VSpd",
+    "synonyms": [ "rate of climb", "vertical speed ", "VSpd", "vspd " ],
+    "languageCode": "en"
+  }, {
+    "value": "Roll",
+    "synonyms": [ " bank angle", "roll", "Roll" ],
+    "languageCode": "en"
+  }, {
+    "value": "Pitch",
+    "synonyms": [ " nose angle", "Pitch" ],
+    "languageCode": "en"
+  }, {
+    "value": "Altitude",
+    "synonyms": [ " alt", "Altitude", "altitude ", "height" ],
+    "languageCode": "en"
+  }, {
+    "value": "IAS",
+    "synonyms": [ " ias", "airspeed ", "IAS", "indicated airspeed" ],
+    "languageCode": "en"
+  } ]
+}

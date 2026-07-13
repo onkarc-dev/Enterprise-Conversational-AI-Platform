@@ -1,0 +1,17 @@
+{
+  "name": "87d7fb65-644f-4daa-a738-bf04f57d6acb",
+  "displayName": "metric_query",
+  "parameters": [ {
+    "id": "aggregation",
+    "entityType": "@aggregation"
+  }, {
+    "id": "metric",
+    "entityType": "@metric"
+  }, {
+    "id": "phase",
+    "entityType": "@phase"
+  } ],
+  "priority": 500000,
+  "description": "Queries flight telemetry metrics for a given flight phase and aggregation type.",
+  "numTrainingPhrases": 10
+}

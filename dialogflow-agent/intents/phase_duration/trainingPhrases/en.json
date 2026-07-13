@@ -1,0 +1,61 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Time spent in ",
+      "auto": true
+    }, {
+      "text": "descent",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Landing",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " duration",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How long did ",
+      "auto": true
+    }, {
+      "text": "taxi",
+      "parameterId": "phase",
+      "auto": true
+    }, {
+      "text": " last",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Duration of ",
+      "auto": true
+    }, {
+      "text": "cruise",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How long was ",
+      "auto": true
+    }, {
+      "text": "climb",
+      "parameterId": "phase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

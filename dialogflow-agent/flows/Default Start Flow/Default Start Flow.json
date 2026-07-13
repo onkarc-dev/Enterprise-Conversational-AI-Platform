@@ -1,0 +1,142 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hello and Greetings! How can I assist?\nI can help with flight analytics.\n\nTry:\n• Flight overview\n• Phase duration\n• Safety analysis\n• Metric analysis\n• Trend analysis" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Default Start Flow",
+    "name": "4c4cfdc2-2464-434a-b260-33cbca4325ea"
+  }, {
+    "intent": "metric_query",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Metric Query Handler",
+    "name": "f6e71390-3397-4c17-8cfe-40bba3c77d11"
+  }, {
+    "intent": "flight_overview",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Flight Overview Handler",
+    "name": "4bac93a5-c0a2-4b3a-9517-a2f091e31906"
+  }, {
+    "intent": "phase_duration",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Phase Duration Handler",
+    "name": "0d1bf8d6-20f9-452c-88f0-189b54df02e6"
+  }, {
+    "intent": "list_phases",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Phase List Handler",
+    "name": "87871c12-f68e-4158-aa67-d4a221dd1642"
+  }, {
+    "intent": "safety_analysis",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Safety Analysis Handler",
+    "name": "88d3fd7e-11d2-455c-9c1c-c8faf3746cc2"
+  }, {
+    "intent": "trend_analysis",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Trend Analysis Handler",
+    "name": "ccf4a5a6-a89c-46b5-a9e3-818343fb0ff3"
+  }, {
+    "intent": "followup_phase",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "What about cruise\n", "What about descent\n", "Show climb instead\n", "Compare with landing\n", "Use approach instead" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Followup ",
+    "name": "4412023d-e7cd-4b01-a041-5ca939f1d11a"
+  }, {
+    "intent": "compare_phases",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Compare climb and cruise\n", "Compare descent and landing\n", "Compare altitude during climb and cruise\n", "Compare airspeed in climb versus cruise" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Compare",
+    "name": "297375e0-453f-4e60-992a-4fdda446f19b"
+  }, {
+    "intent": "executive_summary",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Executive summary\n", "Operational report\n", "Management dashboard\n", "Flight performance summary\n", "Show operational KPIs" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Executive Summary",
+    "name": "fb189994-c93b-467f-ae54-3cc6ff563117",
+    "description": "Generating executive flight performance summary, operational insights, safety observations and key metrics."
+  }, {
+    "intent": "anomaly_analysis",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Show anomalies\n", "Any anomalies detected\n", "Abnormal flight behavior\n", "Outlier analysis\n", "Unexpected flight events" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anomaly Analysis Handler",
+    "name": "a134a80a-03b0-43e5-a6d8-7fab72368260"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3378d8db-913f-47a2-ac54-74128650adb5"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3799d91b-46f3-49ee-bac8-1d630358a4a8"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "254b4ab0-9bad-47c0-857f-c4d6980ecc2e",
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "2db7c651-c963-4948-b00f-9e06c99da04c",
+  "displayName": "followup_phase",
+  "parameters": [ {
+    "id": "phase",
+    "entityType": "@phase"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

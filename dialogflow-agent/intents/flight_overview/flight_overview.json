@@ -1,0 +1,10 @@
+{
+  "name": "a4bd19d9-8eb1-456d-8aee-1d81cd97b04f",
+  "displayName": "flight_overview",
+  "parameters": [ {
+    "id": "person",
+    "entityType": "@sys.person"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

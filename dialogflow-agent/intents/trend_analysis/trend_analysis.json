@@ -1,0 +1,10 @@
+{
+  "name": "8d7e63f4-9ba4-42cb-9e27-b0286d100584",
+  "displayName": "trend_analysis",
+  "parameters": [ {
+    "id": "metric",
+    "entityType": "@metric"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

@@ -1,0 +1,60 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Performance trend",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Roll",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " trend",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Pitch",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " trend analysis",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Analyze ",
+      "auto": true
+    }, {
+      "text": "airspeed",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " trend",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Show ",
+      "auto": true
+    }, {
+      "text": "altitude",
+      "parameterId": "metric",
+      "auto": true
+    }, {
+      "text": " trend",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,12 @@
+{
+  "displayName": "Flight Analytics Assistant",
+  "defaultLanguageCode": "en",
+  "timeZone": "America/Los_Angeles",
+  "projectNumber": 8900107229,
+  "startFlow": "Default Start Flow",
+  "advancedSettings": {
+    "loggingSettings": {
+    
+    }
+  }
+}

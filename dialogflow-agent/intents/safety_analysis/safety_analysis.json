@@ -1,0 +1,10 @@
+{
+  "name": "2d38317b-7a94-42ea-a0f1-0038abadd2fb",
+  "displayName": "safety_analysis",
+  "parameters": [ {
+    "id": "person",
+    "entityType": "@sys.person"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}
