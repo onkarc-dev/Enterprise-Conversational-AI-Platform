@@ -1,6 +1,8 @@
+from pathlib import Path
+
 from .flight_engine import DynamicFlightCalculator
 
-FILE_PATH = "rule_labelled.csv"
+FILE_PATH = Path(__file__).resolve().parents[1] / "rule_labelled.csv"
 engine = DynamicFlightCalculator(FILE_PATH)
 
 def init_engine():
@@ -52,6 +54,67 @@ def execute_query(intent_json: dict, engine) -> dict:
     if intent == "flight_overview":
         overview = engine.get_flight_overview()
         return overview
+
+    # ----- Executive summary -----
+    if intent == "executive_summary":
+        overview = engine.get_flight_overview()
+        if overview.get("error"):
+            return overview
+
+        phases = overview.get("phase_breakdown", [])
+        phase_names = [p.get("phase") for p in phases if p.get("phase")]
+        summary = (
+            f"Flight covered {len(phases)} phase segment(s)"
+            f" from {overview.get('flight_start', 'unknown start')}"
+            f" to {overview.get('flight_end', 'unknown end')}."
+        )
+        return {
+            "summary": summary,
+            "total_duration_formatted": overview.get("total_duration_formatted"),
+            "phases": phase_names,
+            "altitude": overview.get("altitude"),
+            "ias": overview.get("ias"),
+            "gnd_speed": overview.get("gnd_speed"),
+        }
+
+    # ----- Safety / anomaly analysis -----
+    if intent == "safety_analysis":
+        try:
+            checks = engine.run_flight_checks()
+            abnormal = []
+            if isinstance(checks, dict):
+                for key, value in checks.items():
+                    if isinstance(value, dict) and not value.get("passed", True):
+                        abnormal.append({"check": key, **value})
+
+            return {
+                "summary": (
+                    "Safety analysis completed. "
+                    f"{len(abnormal)} issue(s) require review."
+                ),
+                "issues": abnormal,
+                "checks": checks,
+            }
+        except Exception as e:
+            return {"error": f"Error running safety analysis: {str(e)}"}
+
+    # ----- Trend analysis -----
+    if intent == "trend_analysis":
+        try:
+            target_phase = phase or "CRUISE"
+            overview = engine.get_phase_overview(target_phase)
+            if overview.get("error"):
+                return overview
+            metrics = overview.get("metrics", {})
+            return {
+                "summary": f"Trend analysis for {target_phase} computed from {overview.get('total_segments', 0)} segment(s).",
+                "phase": target_phase,
+                "duration_formatted": overview.get("duration_formatted"),
+                "metrics": metrics,
+                "segment_details": overview.get("segment_details", []),
+            }
+        except Exception as e:
+            return {"error": f"Error running trend analysis: {str(e)}"}
 
     # ----- Phase Duration -----
     if intent == "phase_duration" and phase:

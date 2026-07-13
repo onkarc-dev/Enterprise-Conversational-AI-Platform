@@ -59,13 +59,13 @@ class DynamicFlightCalculator:
     def create_segments(self):
 
         if 'Phase' not in self.df.columns:
-        raise ValueError(
-            f"'Phase' column not found.\nAvailable columns:\n{self.df.columns.tolist()}"
-        )
+            raise ValueError(
+                f"'Phase' column not found.\nAvailable columns:\n{self.df.columns.tolist()}"
+            )
 
         self.df['segment_id'] = (
-        self.df['Phase'] != self.df['Phase'].shift()
-    ).cumsum()
+            self.df['Phase'] != self.df['Phase'].shift()
+        ).cumsum()
 
         print("Segment IDs Created")
 
@@ -2131,10 +2131,10 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Error loading file {FILE_PATH}: {e}")
         raise
-	if "phase" in engine.df.columns and "Phase" not in engine.df.columns:
-        	engine.df.rename(columns={"phase": "Phase"}, inplace=True)
-    	engine.create_segments()
-    	engine.add_phase_numbering()
+    if "phase" in engine.df.columns and "Phase" not in engine.df.columns:
+        engine.df.rename(columns={"phase": "Phase"}, inplace=True)
+    engine.create_segments()
+    engine.add_phase_numbering()
 
     print("\nDynamic Flight Calculator Ready \n")
     print("DF head:\n", engine.df.head())
