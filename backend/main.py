@@ -20,8 +20,9 @@ async def dialogflow_webhook(request: Request):
 
     body = await request.json()
 
-    print("==== DIALOGFLOW REQUEST ====")
+    print("\n========== DIALOGFLOW REQUEST ==========")
     print(body)
+    print("========================================\n")
 
     return {
         "fulfillment_response": {
@@ -29,7 +30,7 @@ async def dialogflow_webhook(request: Request):
                 {
                     "text": {
                         "text": [
-                            "Webhook connected."
+                            "Payload received"
                         ]
                     }
                 }
