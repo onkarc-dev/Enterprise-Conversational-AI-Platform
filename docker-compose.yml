@@ -7,16 +7,14 @@ services:
       dockerfile: Dockerfile.backend
     container_name: flight-analytics-backend
     ports:
-      - "5000:5000"
+      - "8000:8000"
     volumes:
-      - ./rule_labelled.csv:/app/rule_labelled.csv
-      - ./uploads:/app/uploads
+      - ./rule_labelled.csv:/app/rule_labelled.csv:ro
     environment:
-      - FLASK_ENV=production
       - PYTHONUNBUFFERED=1
-      - HF_TOKEN=${HF_TOKEN:-}
+      - CORS_ORIGINS=${CORS_ORIGINS:-*}
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -33,7 +31,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NEXT_PUBLIC_API_URL=http://backend:5000
+      - NEXT_PUBLIC_API_URL=http://backend:8000
     depends_on:
       backend:
         condition: service_healthy
